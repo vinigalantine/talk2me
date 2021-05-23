@@ -1,0 +1,24 @@
+{
+  "name": "talk2me",
+  "version": "1.0.0",
+  "description": "Node project using Express and Socket.io to create a real time chat.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinigalantine/talk2me.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vinigalantine/talk2me/issues"
+  },
+  "homepage": "https://github.com/vinigalantine/talk2me#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^4.1.2"
+  }
+}

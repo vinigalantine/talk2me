@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <link href="./css/main.css" rel="stylesheet">
+    </head>
+    <script>
+        const getNome = () => {
+            while(true){
+                let temp = prompt("What's your name?");
+
+                if(!temp || !temp.trim())
+                    alert("You need to have a name!");
+                else {
+                    return temp;
+                }
+            }
+        }
+        const nameUser = getNome();
+    </script>
+    <div class="messages" id="messagesBox"></div>
+    <form id="formSend">
+        <input type="text" id="messageInput">
+        <button type="button">Send</button>
+    </form>
+    <body>
+        <h4>Hello world! There are <label id="onPeople"></label> people online</h4>
+        <script src="/socket.io/socket.io.js"></script>
+        <!-- <script src="../node_modules/socket.io/wrapper.mjs"></script> -->
+        <script src="./js/main.js"></script>
+    </body>
+</html>

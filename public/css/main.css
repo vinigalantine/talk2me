@@ -1,0 +1,37 @@
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+.messages{
+    height: 200px;
+    width: 400px;
+    background-color: lightgray;
+    border-style: solid;
+    border-width: 1px;
+    border-color: gray;
+    overflow-y: scroll;
+}
+.message{
+    height: auto;
+    width: auto;
+    padding: 2px 5px 2px 5px;
+    border-radius: 5px;
+}
+.message.mine{
+    float: left;
+    text-align: left;
+    background-color: rgb(111, 185, 196);
+}
+.message.theirs{
+    float: right;
+    text-align: right;
+    background-color: greenyellow;
+}
+form{
+    width: 400px;
+}
+form>input{
+    width: 80%;
+}
+form>button{
+    width: 18%;
+}
