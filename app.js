@@ -5,8 +5,6 @@ const server = Server(app);
 const io = require('socket.io')(server);
 var path = require('path');
 
-
-// viewed at http://localhost:8080
 app.use(express.static(__dirname + '/public'))
 app.use('/css/bootstrap', express.static(__dirname + '/node_modules/bootstrap/dist/css')); 
 app.use('/js/bootstrap', express.static(__dirname + '/node_modules/bootstrap/dist/js')); 
@@ -28,3 +26,5 @@ io.on('connection', (socket) => {
 });
 
 server.listen(8080);
+
+console.log(`The application running at http://localhost:${server.address().port}`);
