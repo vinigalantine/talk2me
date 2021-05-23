@@ -18,7 +18,11 @@
   },
   "homepage": "https://github.com/vinigalantine/talk2me#readme",
   "dependencies": {
+    "bootstrap": "^5.0.1",
     "express": "^4.17.1",
     "socket.io": "^4.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }

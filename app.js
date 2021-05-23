@@ -8,6 +8,8 @@ var path = require('path');
 
 // viewed at http://localhost:8080
 app.use(express.static(__dirname + '/public'))
+app.use('/css/bootstrap', express.static(__dirname + '/node_modules/bootstrap/dist/css')); 
+app.use('/js/bootstrap', express.static(__dirname + '/node_modules/bootstrap/dist/js')); 
 
 let count = 0;
 

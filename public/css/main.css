@@ -1,37 +1,71 @@
 *{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif!important;
 }
-.messages{
-    height: 200px;
-    width: 400px;
+body{
+    padding-top: 10px;
+}
+.message-box{
+    height: 70%;
+    width: auto;
     background-color: lightgray;
     border-style: solid;
     border-width: 1px;
     border-color: gray;
     overflow-y: scroll;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .message{
     height: auto;
     width: auto;
     padding: 2px 5px 2px 5px;
     border-radius: 5px;
+    position: relative;
+	border-radius: .4em;
+}
+br{
+    line-height: 16px;
+}
+.message::after{
+    content: '';
+	position: absolute;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 5px solid transparent;
+	margin-top: -5px;
 }
 .message.mine{
     float: left;
     text-align: left;
-    background-color: rgb(111, 185, 196);
+	background: greenyellow;
+}
+.message.mine::after{
+    left: 0;
+    border-right-color: greenyellow;
+	border-left: 0;
+	margin-left: -5px;
 }
 .message.theirs{
+    background-color: #00aabb;
     float: right;
     text-align: right;
-    background-color: greenyellow;
 }
-form{
-    width: 400px;
+.message.theirs::after{
+    right: 0;
+    border-left-color: #00aabb;
+	border-right: 0;
+	margin-right: -5px;
 }
-form>input{
-    width: 80%;
+.container{
+    height: 90%;
 }
-form>button{
-    width: 18%;
+.row{
+    height: 100%;
+}
+.custom-input{
+    border-top-left-radius: 0!important;
+}
+.custom-btn{
+    border-top-right-radius: 0!important;
 }

@@ -2,13 +2,14 @@
     <head>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <link href="./css/bootstrap/bootstrap.min.css" rel="stylesheet">
         <link href="./css/main.css" rel="stylesheet">
     </head>
     <script>
         const getNome = () => {
             while(true){
                 let temp = prompt("What's your name?");
-
+            
                 if(!temp || !temp.trim())
                     alert("You need to have a name!");
                 else {
@@ -18,13 +19,32 @@
         }
         const nameUser = getNome();
     </script>
-    <div class="messages" id="messagesBox"></div>
-    <form id="formSend">
-        <input type="text" id="messageInput">
-        <button type="button">Send</button>
-    </form>
     <body>
-        <h4>Hello world! There are <label id="onPeople"></label> people online</h4>
+        <div class="container">
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-6">
+                    <h4>Wellcome! There <span id="toBeVerb">is</span> <span id="onPeople" class="badge bg-success">0</span> <span id="endPhrase">person online</span></h4>
+                    <div class="message-box" id="messagesBox"></div>
+                    <form id="formSend">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control custom-input" id="messageInput" placeholder="Type your message" aria-label="Message" aria-describedby="message" autocomplete="off">
+                            <button class="btn btn-success custom-btn" type="submit">Send</button>
+                        </div>
+                        <!-- <input class="form-control" type="text" id="messageInput" autocomplete="off">
+                        <button class="btn btn-success">Send</button> -->
+                    </form>
+                </div>
+                <div class="col-3"></div>
+            </div>
+        </div>
+        <footer>
+            <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+                Made with ❤
+                <a class="text-reset fw-bold" href="https://github.com/vinigalantine/talk2me">Talk2Me</a>
+            </div>
+        </footer>
+        <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
         <script src="/socket.io/socket.io.js"></script>
         <script src="./js/main.js"></script>
     </body>
